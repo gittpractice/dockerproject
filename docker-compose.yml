@@ -18,5 +18,3 @@ recharge:
     - 8002:80
   deploy:
     replicas: 3
-
-
