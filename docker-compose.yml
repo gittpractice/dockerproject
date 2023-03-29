@@ -1,23 +1,23 @@
 version: "3"
-services: null
-movie:
-  image: ravitejakasani/phonepemovies:v1
-  deploy:
-    node: replicated
-    replicas: 3
-  ports:
-    - "8008:8000"
-train:
-  image: ravitejakasani/phonepetrains:v1
-  deploy:
-    node: replicated
-    replicas: 3
-  ports:
-    - "8007:8000"
-recharge:
-  image: ravitejakasani/phoneperecharges:v1
-  deploy:
-    node: replicated
-    replicas: 3
-  ports:
-    - "8006:8000"
+services:
+  movie:
+    image: ravitejakasani/phonepemovies:v1
+    deploy:
+      node: replicated
+      replicas: 3
+    ports:
+      - 8008:8000
+  train:
+    image: ravitejakasani/phonepetrains:v1
+    deploy:
+      node: replicated
+      replicas: 3
+    ports:
+      - 8007:8000
+  recharge:
+    image: ravitejakasani/phoneperecharges:v1
+    deploy:
+      node: replicated
+      replicas: 3
+    ports:
+      - 8006:8000
