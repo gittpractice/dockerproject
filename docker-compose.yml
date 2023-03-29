@@ -1,0 +1,24 @@
+version: '3'
+services: 
+  movie:
+    image: ravitejakasani/phonepemovies:v1
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: ravitejakasani/phonepetrains:v1
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: ravitejakasani/phoneperecharges:v1
+    ports:
+      - "8002:80"  
+    deploy:
+      replicas: 3
+
+
